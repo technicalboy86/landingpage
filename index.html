@@ -134,66 +134,72 @@
 				<p>Tutor Doctor provides tutoring services to students of all ages, levels and subjects. We come to your home, at a convenient time for you, to help students ﬁll gaps in their knowledge base.</p>
 
 				<div class="row">
-					<div class="col-lg-4">
-						<ul>
+					<div class="col-lg-12">
+						<ul class="tab">
 							<li>
-								<a href="javascript:function() { return false; }" class="collapsible">Math for All Ages <img src="img/arrowli.svg" alt=""></a>
-								<div class="content">
-								  <p>Lorem ipsum...</p>
-								</div>
+								<a href="javascript:function() { return false; }" class="tablinks" onclick="openCity(event, 'Math')">Math for All Ages<img src="img/arrowli.svg" alt=""></a>
 							</li>
 
 							<li>
-								<a href="javascript:function() { return false; }" class="collapsible">Sciences <img src="img/arrowli.svg" alt=""></a>
-								<div class="content">
-								  <p>Lorem ipsum...</p>
-								</div>
+								<a href="javascript:function() { return false; }" class="tablinks" onclick="openCity(event, 'Sciences')">Sciences <img src="img/arrowli.svg" alt=""></a>
 							</li>
 							<li>
-								<a href="javascript:function() { return false; }" class="collapsible">English <img src="img/arrowli.svg" alt=""></a>
-								<div class="content">
-								  <p>Lorem ipsum...</p>
-								</div>
+								<a href="javascript:function() { return false; }" class="tablinks" onclick="openCity(event, 'English')">English <img src="img/arrowli.svg" alt=""></a>
+							</li>
+							<li>
+								<a href="javascript:function() { return false; }" class="tablinks" onclick="openCity(event, 'ESL')">ESL / Languages <img src="img/arrowli.svg" alt=""></a>
+							</li>
+							<li>
+								<a href="javascript:function() { return false; }" class="tablinks" onclick="openCity(event, 'Exam')">Exam Preparation <img src="img/arrowli.svg" alt=""></a>
+							</li>
+							<li>
+								<a href="javascript:function() { return false; }" class="tablinks" onclick="openCity(event, 'Social')">Social Sciences <img src="img/arrowli.svg" alt=""></a>
+							</li>
+							<li>
+								<a href="javascript:function() { return false; }" class="tablinks" onclick="openCity(event, 'Special')">Special Needs <img src="img/arrowli.svg" alt=""></a>
+							</li>
+							<li>
+								<a href="javascript:function() { return false; }" class="tablinks" onclick="openCity(event, 'Online')">Online Tutoring <br> Now Available <img src="img/arrowli.svg" alt=""></a>
 							</li>
 						</ul>
-					</div>
-					<div class="col-lg-4">
-						<ul>
-							<li>
-								<a href="javascript:function() { return false; }" class="collapsible">ESL / Languages <img src="img/arrowli.svg" alt=""></a>
-								<div class="content">
-								  <p>Lorem ipsum...</p>
-								</div>
-							</li>
-							<li>
-								<a href="javascript:function() { return false; }" class="collapsible">Exam Preparation <img src="img/arrowli.svg" alt=""></a>
-								<div class="content">
-								  <p>Lorem ipsum...</p>
-								</div>
-							</li>
-							<li>
-								<a href="javascript:function() { return false; }" class="collapsible">Social Sciences <img src="img/arrowli.svg" alt=""></a>
-								<div class="content">
-								  <p>Lorem ipsum...</p>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="col-lg-4">
-						<ul>
-							<li>
-								<a href="javascript:function() { return false; }" class="collapsible">Special Needs <img src="img/arrowli.svg" alt=""></a>
-								<div class="content">
-								  <p>Lorem ipsum...</p>
-								</div>
-							</li>
-							<li>
-								<a href="javascript:function() { return false; }" class="collapsible">Online Tutoring <br> Now Available <img src="img/arrowli.svg" alt=""></a>
-								<div class="content">
-								  <p>Lorem ipsum...</p>
-								</div>
-							</li>
-						</ul>
+						<div id="Math" class="tabcontent">
+						  <p>Set Your Child Up for Success with the Right Tools At Tutor Doctor, </p>
+
+								<p>we call students with special needs exceptional students. The term exceptional celebrates students’ differences, includes all learners who need additional support in the classroom, and is quickly becoming the preferred term in educational circles.
+
+								In a study conducted by the Center of Parent Information and Resources, it was discovered that one-to-one tutoring is profoundly beneficial for students with unique learning needs. At Tutor Doctor, we know exceptional students can succeed given the right tools and personalized attention- which is exactly what our tutoring program aims to provide.
+
+								When you work with us, the tutors we work with come to you-- wherever you are, whenever is convenient for you. After matching your child with a handpicked tutor, our goal is to fill in the missing gaps in your child’s knowledge, provide them with the skills necessary to be independent learners, and to help boost their confidence by allowing them to grow in a comfortable learning environment.</p>
+						</div>
+
+						<div id="Sciences" class="tabcontent">
+						  <p>Sciences content.</p>
+						</div>
+
+						<div id="English" class="tabcontent">
+						  <p>English content.</p>
+						</div>
+
+						<div id="ESL" class="tabcontent">
+						  <p>ESL content.</p>
+						</div>
+
+						<div id="Exam" class="tabcontent">
+						  <p>Exam content.</p>
+						</div>
+
+						<div id="Social" class="tabcontent">
+						  <p>Social content.</p>
+						</div>
+
+						<div id="Special" class="tabcontent">
+						  <p>Special content.</p>
+						</div>
+
+						<div id="Online" class="tabcontent">
+						  <p>Online content.</p>
+						</div>
+
 					</div>
 				</div>
 
@@ -258,20 +264,27 @@ $(".sec7 form").on("submit",function(e) {
    window.location.href = "thankyoupage.html";
 });
 
-var coll = document.getElementsByClassName("collapsible");
-var i;
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
 }
+openCity(event, 'Math');
 
 </script>
 

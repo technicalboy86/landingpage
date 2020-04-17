@@ -302,7 +302,7 @@
         opacity: 0.7;
         text-decoration: none; }      
       .sec6 ul li a.active{
-        margin-bottom: 0px;
+        border-bottom: 1px solid #ED1B2F;
       }
       .sec6 ul li img {
         position: absolute;
@@ -667,7 +667,7 @@
 
 @media screen and (min-width: 992px) {
   .video-responsive {
-    padding-bottom: calc(30vw);
+    padding-bottom: calc(25vw);
     padding-top: 10px;
   }
 }
@@ -689,4 +689,22 @@
   padding: 0 0px;
   display: none;
   overflow: hidden;
+}
+
+* {box-sizing: border-box}
+
+/* Style the tab */
+.tab {
+  float: left;
+  width: 30%;
+}
+
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  width: 70%;
+  border-left: none;
+  height: 600px;
 }
