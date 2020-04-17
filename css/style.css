@@ -659,18 +659,19 @@
 
 
 .video-responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
-}
-
-@media screen and (min-width: 992px) {
-  .video-responsive {
-    padding-bottom: calc(44vw);
-    padding-top: 10px;
+      overflow:hidden;
+      padding-bottom:56.25%;
+      position:relative;
+      height:0;
+      max-height: 596px;
   }
-}
+  
+  @media screen and (min-width: 992px) {
+    .video-responsive {
+      height: 596px;
+      padding-bottom:10px;
+    }
+  }
 
 .video-responsive iframe{
     left:0;
